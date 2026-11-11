@@ -22,7 +22,8 @@
         "openapi": "api-reference/openapi.json",
         "pages": [
           "GET /plants",
-          "POST /plants"
+          "POST /plants",
+          "GET /plants/{id}"
         ]
       }
     ],
