@@ -16,6 +16,14 @@
           "index",
           "quickstart"
         ]
+      },
+      {
+        "group": "API Reference",
+        "openapi": "api-reference/openapi.json",
+        "pages": [
+          "GET /plants",
+          "POST /plants"
+        ]
       }
     ],
     "global": {

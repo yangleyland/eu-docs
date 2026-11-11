@@ -1,0 +1,35 @@
+{
+  "openapi": "3.0.3",
+  "info": { "title": "EU Plant Store", "version": "1.0.0" },
+  "servers": [{ "url": "https://api.example.com" }],
+  "paths": {
+    "/plants": {
+      "get": {
+        "summary": "List plants",
+        "operationId": "listPlants",
+        "parameters": [{ "name": "limit", "in": "query", "schema": { "type": "integer" } }],
+        "responses": {
+          "200": {
+            "description": "Plants",
+            "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Plant" } } } }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create plant",
+        "operationId": "createPlant",
+        "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Plant" } } } },
+        "responses": { "201": { "description": "Created", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Plant" } } } } }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Plant": {
+        "type": "object",
+        "required": ["name"],
+        "properties": { "id": { "type": "integer" }, "name": { "type": "string" }, "tag": { "type": "string" } }
+      }
+    }
+  }
+}
