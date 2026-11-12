@@ -92,6 +92,25 @@
             }
           }
         }
+      },
+      "delete": {
+        "summary": "Delete plant",
+        "operationId": "deletePlant",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Plant deleted"
+          }
+        }
       }
     }
   },

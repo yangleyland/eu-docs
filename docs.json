@@ -23,7 +23,8 @@
         "pages": [
           "GET /plants",
           "POST /plants",
-          "GET /plants/{id}"
+          "GET /plants/{id}",
+          "DELETE /plants/{id}"
         ]
       }
     ],
